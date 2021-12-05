@@ -186,7 +186,7 @@ function Contestdetail() {
       {value ? (
         <img
           src={value ? URL.createObjectURL(value) : undefined}
-          style={{ width: "70vw", margin: "auto" }}></img>
+          style={{ width: "70vw", margin: "auto" }} alt=""></img>
       ) : undefined}
       {ImageURL ? (
         <p className='w-full  bg-white text-2xl text-center m-2 rounded' onClick={()=>PostUpload()}>
@@ -203,13 +203,13 @@ function Contestdetail() {
       {posts?.map((res) => {
         return (
           <div className='' key={res._id} style={{ width: "" }}>
-            <img
+            <img alt=""
               src={res.PostImage}
               className='h-auto  m-4 rounded-2xl'
               style={{ width: "40vw" }}
             />
 <button onClick={()=>likefunction( res._id)}>
-            <img src={newr} className='w-12 m-auto' />
+            <img src={newr} className='w-12 m-auto' alt=""/>
             </button>
             <p className='text-center text-white font-bold'>
               {res.Postlike.length}

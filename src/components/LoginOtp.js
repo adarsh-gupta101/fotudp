@@ -26,27 +26,27 @@ function handleOTP(e){
   const [message, showMessage] = useState();
 console.log(message)
 
-  const ValidateOtp = () => {
-    if (Otp === null || final === null) return;
-    final
-      .confirm(Otp)
-      .then((result) => {
-        // successale
-        alert("nice");
-      })
-      .catch((err) => {
-        alert("Wrong code");
-      });
-  };
+  // const ValidateOtp = () => {
+  //   if (Otp === null || final === null) return;
+  //   final
+  //     .confirm(Otp)
+  //     .then((result) => {
+  //       // successale
+  //       alert("nice");
+  //     })
+  //     .catch((err) => {
+  //       alert("Wrong code");
+  //     });
+  // };
 
-  const firebaseConfig = firebase.apps.length
-    ? firebase.app().options
-    : undefined;
+  // const firebaseConfig = firebase.apps.length
+  //   ? firebase.app().options
+  //   : undefined;
   
 
   return (
     <div className='relative' style={{ height: "100vh" }}>
-      <img src={loginpng} className=' absolute ' />
+      <img src={loginpng} className=' absolute ' alt=""/>
       <p
         style={{ top: "55%" }}
         className='text-white text-2xl text-center font-bold'>
@@ -70,9 +70,7 @@ handleOTP(e)
       <button
         className='absolute p-2 rounded-xl'
         style={{
-          top: 100 / 1.5,
           backgroundColor: "#3CB1FF",
-          width: "100vw",
 
           left: "5%",
           top: "75%",

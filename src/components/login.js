@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "../logincon.png";
-import { useSelector, useDispatch } from 'react-redux'
+import {  useDispatch } from 'react-redux'
 import { adduser, vid } from "../slice";
 //import { getAuth, RecaptchaVerifier } from "firebase/auth";
 import {auth,firebase} from "../firebase"
@@ -12,7 +12,7 @@ function Login() {
   const dispatch = useDispatch()
 
   console.log(firebase)
-  const[final,setfinal]=useState()
+  // const[final,setfinal]=useState()
   const[isregUser,setisregUser]=useState()
 
   const signin = () => {
@@ -60,7 +60,7 @@ const userSearching = async () => {
     <div className='text-red relative'>
                           <div id="recaptcha-container"></div>
 
-      <img
+      <img alt=""
         src={Image}
         className=' shadow-inner-2xl'
         style={{ width: "100vh", height: "100vh" }}
@@ -82,9 +82,7 @@ const userSearching = async () => {
       <button
         className='absolute p-2 rounded-xl'
         style={{
-          top: 100 / 1.5,
           backgroundColor: "#3CB1FF",
-          width: 100 / 1.2,
 
           left: "5%",
           top: "75%",
@@ -100,12 +98,11 @@ const userSearching = async () => {
 userSearching()          // navigate("/auth")
           //alert("hi")
         }}>
-          <a>
         <p
           className='text-white text-center p-2  font-bold'
           style={{ textAlign: "center" }}>
           Log in
-        </p></a>
+        </p>
       </button>
       <span
         className='absolute text-white text-center  w-full'
